@@ -112,4 +112,9 @@ class _HomePageState extends State<HomePage> implements HomePageView {
   dismissLoading() {
     print("dismissLoading");
   }
+
+  @override
+  onHttpException() {
+    print("onHttpException");
+  }
 }

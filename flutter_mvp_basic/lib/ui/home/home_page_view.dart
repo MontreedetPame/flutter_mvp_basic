@@ -12,4 +12,6 @@ abstract class HomePageView {
   onFailEditUser(Response response) {}
 
   dismissLoading();
+
+  onHttpException();
 }

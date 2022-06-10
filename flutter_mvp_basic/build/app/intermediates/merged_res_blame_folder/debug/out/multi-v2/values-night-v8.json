@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\zoozo\\AndroidStudioProjects\\project_flutter\\flutter_mvp_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\zoozo\\AndroidStudioProjects\\flutter_mvp_basic\\flutter_mvp_basic\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\zoozo\\AndroidStudioProjects\\project_flutter\\flutter_mvp_app\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\zoozo\\AndroidStudioProjects\\flutter_mvp_basic\\flutter_mvp_basic\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

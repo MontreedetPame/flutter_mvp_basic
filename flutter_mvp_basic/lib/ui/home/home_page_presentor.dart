@@ -17,22 +17,30 @@ class HomePagePresentor extends BasePresentor<HomePageView> {
       var response = await appDataManager.apiHelper
           .restApi(_action, param, method, object);
       isViewAttached ? getView()?.dismissLoading() : null;
-      if (NetworkUtils.isReqSuccess(response)) {
-        String text = response.body;
-        isViewAttached ? getView()?.onLoadUser(text) : null;
-      } else {
-        isViewAttached ? getView()?.onFailLoadUser(response) : null;
+      if(response == null){
+        isViewAttached ? getView()?.onHttpException() : null;
+      }else {
+        if (NetworkUtils.isReqSuccess(response)) {
+          String text = response.body;
+          isViewAttached ? getView()?.onLoadUser(text) : null;
+        } else {
+          isViewAttached ? getView()?.onFailLoadUser(response) : null;
+        }
       }
     } else if (_action == ApiConfig.EDIT_USER) {
       isViewAttached ? getView()?.showLoading("กำลังแก้ไข...") : null;
       var response = await appDataManager.apiHelper
           .restApi(_action, param, method, object);
       isViewAttached ? getView()?.dismissLoading() : null;
-      if (NetworkUtils.isReqSuccess(response)) {
-        String text = response.body;
-        isViewAttached ? getView()?.onEditUser(text) : null;
-      } else {
-        isViewAttached ? getView()?.onFailEditUser(response) : null;
+      if(response == null){
+        isViewAttached ? getView()?.onHttpException() : null;
+      }else {
+        if (NetworkUtils.isReqSuccess(response)) {
+          String text = response.body;
+          isViewAttached ? getView()?.onEditUser(text) : null;
+        } else {
+          isViewAttached ? getView()?.onFailEditUser(response) : null;
+        }
       }
     }
   }
